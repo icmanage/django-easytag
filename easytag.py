@@ -9,7 +9,7 @@ except ImportError:
 
 __name__ = 'easytag'
 __author__ = 'Autumn Valenta'
-__version_info__ = (1, 0, "1rc1")
+__version_info__ = (1, 0, 1)
 __version__ = '.'.join(map(str, __version_info__))
 __date__ = '2014/07/22 4:47:00 PM'
 __credits__ = ['Autumn Valenta', "Steven Klass"]
