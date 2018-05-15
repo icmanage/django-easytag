@@ -184,3 +184,10 @@ Note how there is no ``nodelist`` parameter in this case, since the end tag has 
 Also take note that the returned string is automatically sent through ``django.utils.safestring.mark_safe`` by Django when the content ultimately gets returned as a single large string from the ``render()`` method.
 
 This strategy is helpful for allowing intermediate tags to accumulate some information but not act on it until the end of the tag.
+
+
+### Build Process:
+1.  Update the `__version_info__` inside of the application. Commit and push.
+2.  Tag the release with the version. `git tag <version> -m "Release"; git push --tags`
+3.  Build the release `rm -rf dist build *egg-info; python setup.py sdist bdist_wheel`
+4.  Upload the data `twine upload dist/*`
